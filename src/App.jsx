@@ -5,7 +5,7 @@ import ChatMessage from "./components/ChatMessage";
 
 const App = () => {
   const [chatHistory, setChatHistory] = useState([]);
-  const [showChatbot, setShowChatbot] = useState([false]);
+  const [showChatbot, setShowChatbot] = useState(false);
 
   const chatBodyRef = useRef();
 
@@ -27,7 +27,7 @@ const App = () => {
 
     try {
       // Make the apiu call ro get the bots response 
-      const response = await fetch(import.meta.env.VITE_API_URL, requestOptions)
+      const response = await fetch("/api/chat", requestOptions);
       const data = await response.json();
       if (!response.ok) throw new Error(data.error.message || "Something went wrong :(");
 

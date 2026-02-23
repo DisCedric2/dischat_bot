@@ -14,7 +14,7 @@ body {
   align-items: center;
   justify-content: center; */
   min-height: 100vh;
-  background: linear-gradient(■#F4F0FF, #dacdff);
+  background: linear-gradient(135deg, #eef2ff, #dbeafe);
 }
 
 #chatbot-toggler {
@@ -79,7 +79,7 @@ body {
   padding: 15px 22px;
   align-items: center;
   justify-content: space-between;
-  background: #4bbfcc;
+  background: #6366f1;
 }
 
 .chat-header .header-info {

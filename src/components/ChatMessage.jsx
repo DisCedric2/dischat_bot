@@ -1,13 +1,14 @@
-import ChatbotIcon from "./ChatbotIcon"
+import ChatbotIcon from "./ChatbotIcon";
 
 const ChatMessage = ({ chat }) => {
+  const isBot = chat.role === "model";
+
   return (
-    <div className={`message ${chat.role === "model" ? 'bot' : 'user'}-message ${chat.isError ? "error" : ""}`}>
-      {chat.role === "model" && <ChatbotIcon/>}
+    <div className={`message ${isBot ? "bot-message" : "user-message"} ${chat.isError ? "message-error" : ""}`}>
+      {isBot && <ChatbotIcon />}
       <p className="message-text">{chat.text}</p>
     </div>
-  )
-}
+  );
+};
 
-export default ChatMessage
-
+export default ChatMessage;
